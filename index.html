@@ -1,0 +1,17 @@
+<!-- HUBL & HTML -->
+
+<!-- Standard Image -->
+<img loading="lazy" 
+     data-src="{{ resize_image_url(IMAGEURL, WIDTH, HEIGHT, SIZE) }}" alt="ALT TEXT" />
+     
+     
+<!-- Responsive Image -->
+<img loading="lazy" 
+     data-srcset="{{ resize_image_url(IMAGEURL, 320, HEIGHT, SIZE) }} 320w,
+             {{ resize_image_url(IMAGEURL, 480, HEIGHT, SIZE) }} 480w,
+             {{ resize_image_url(IMAGEURL, 800, HEIGHT, SIZE) }} 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     alt="ALT TEXT"
+     >
